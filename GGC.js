@@ -176,7 +176,7 @@ function makeObject(_objectType){
 		args: Array.from(arguments),
 		func: _objectType,
 		draw: function(){
-			func.apply(null,this.args.slice(1,this.args.length));
+			this.func.apply(null,this.args.slice(1,this.args.length));
 			
 		},
 		color: "black"
