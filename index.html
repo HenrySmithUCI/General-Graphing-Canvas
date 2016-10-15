@@ -1,0 +1,25 @@
+<html>
+<canvas id = "canvas" width = "500" height = "500" style = "border:1px solid #000000;"></canvas>
+<script src = "GGC.js"></script>
+<script>
+init("canvas", 4, -4, 4, -4);
+
+for(var i = -4; i <= 4; i++){
+	for(var j = -4; j <= 4; j++){
+		obj = makeObject(objectTypes.POINT,i,j);
+		obj.color = "grey";
+	}
+}
+
+function f(x){
+	return (x * x * x) - 3 * (x * x) + x + 1;
+}
+
+makeObject(objectTypes.FUNCTION, f).color = "blue";
+makeObject(objectTypes.TEXT, "Oh no! A rouge cubic!", -1.8, 1.5).color = "green";
+makeObject(objectTypes.LINE,0,0,0,1).color = "black";
+makeObject(objectTypes.LINE,0,0,1,0).color = "balck";
+
+drawCanvas();
+</script>
+</html>
