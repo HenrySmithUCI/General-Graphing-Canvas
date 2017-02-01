@@ -152,7 +152,7 @@ function drawFunction(_f, _dx = 0.1, _minX = minX, _maxX = maxX){
 function drawCurve(_x, _y, _minT, _maxT, _dt = 0.1){
 	ctx.beginPath();
 	ctx.moveTo(gX(_x(_minT)), gY(_y(_minT)));
-	for(t = _minT + _dt; t < _maxT + dt; t += _dt){
+	for(t = _minT + _dt; t < _maxT + _dt; t += _dt){
 		ctx.lineTo(gX(_x(t)), gY(_y(t)));
 	}
 	ctx.stroke();
